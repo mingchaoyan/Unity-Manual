@@ -9,7 +9,6 @@ AB的名字是小写的，使用斜杠（forward slash）将创建一个目录
 0. 在Inspector底部标记本资源需要打包进的AB
 1. BuildPipeline.BuildAssetBundle打包已经被标记的资源
 2. 确保已经创建AssetBundles目录
-
 ```cs
 using UnityEditor;
 
@@ -22,7 +21,6 @@ public class CreateAssetBundles
     }
 }
 ```
-
 每一个ab都有一个对应的manifest，这里面包含了CRC冗余校验，资源依赖等信息。
 
 ## AB 编辑器工具
