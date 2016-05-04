@@ -1,0 +1,6 @@
+# Profiler window 
+## Attaching to Unity players
+把Profiler连接到其他设备是可以的。Active Profiler的下拉菜单展示了本地网络中所有在运行的游戏。这些运行实例通过它们的类型和host name区分。运行实例必须使用Development Build模式运行才可以连接。在Build Setting对话框中，可以选择让编辑器和运行实例在启动的时候就连接起来。
+
+## Profiler Controls
+窗口上方是Profiler Controls，使用它可以打开／关闭profiler，逐帧跑。右上方有transport按钮。注意当游戏在跑以及profiler在收集数据的时候，按下任何transport按钮都会使游戏暂停。能够控制跑到收集的第一帧，往前往后逐帧，跑到最后一帧。Profiler并不会保留所有搜集的信息，所以这里所谓的第一帧表示在内存中的最就的那个信息。current transport按钮将导致profile统计当前帧。Active Profiler允许你选择是否profiler在编辑器或者独立运行的实例中（比如iOS设备）
