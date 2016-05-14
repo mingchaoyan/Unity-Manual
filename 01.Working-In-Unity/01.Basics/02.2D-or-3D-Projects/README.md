@@ -21,7 +21,7 @@
 
 ### 2D Graphics
 
-### 2D Phusics
+### 2D Physics
 
 #### 2D Joints
 
@@ -33,6 +33,7 @@
 
 ## 2D vs 3D Mode Setting
 2D 或者 3D模式决定了Unity编辑器中的一些设置，如下：
+
 项目| 2D | 3D
 ----|------|----
 导入的图片 | 假设2D，设置成Srpite  | 不假设成2D
