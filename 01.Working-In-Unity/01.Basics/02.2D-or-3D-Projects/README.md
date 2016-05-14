@@ -45,6 +45,6 @@ Scene View| 2D | 3D
 Skybox | disable | enable
 环境因素| 颜色| 天空盒
 实时GI预处理| off | on
-GI 烘焙 | off ｜ on
+GI 烘焙 | off | on
 自动构建| off | on
 
