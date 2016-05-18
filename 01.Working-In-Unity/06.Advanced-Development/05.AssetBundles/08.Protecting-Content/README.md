@@ -1,0 +1,13 @@
+# Protecting Content
+
+通过加密来保证你资源的安全是可能的，因为他们在网络上传输，一旦资源到了客户端那边就有可能获取里面的资源。比如，有工具可以在驱动层记录3D数据，允许用户在数据发送给GPU的时候提取模型和纹理。对此，我们的态度是，如果用户真的决定要解压我们的资源，他们一定可以的。
+
+可是如果你还是要加密，我们还是允许你来加密AB文件的。
+
+一种方法是使用bytes类型来存储TextAsset类型。你可以加密你的数据然后保存成.bytes 后缀名，Unity将以TextAsset类型对待。一旦导入编辑器他就能放入AssetBundle。在客户端，AssetBundle就能被下载然后解压成二进制数据。这种方式AB本身没有加密，但是里面存储的内容是TextAsset。
+
+另一个方式是完全加密AB，然后使用WWW类下载。你可以使用任何后缀名。一旦下载，你将使用你自己的解密程序来解密WWW对象的.bytes熟悉。然后再在内存中创建AB，使用AssetBundle.CreateFromMemory
+
+后者的优势是你可以使用热河方式来传输你的二进制，并且这个二进制是完全加密的。劣势是你将无法使用Unity自动cache。你可以在除了Web平台外的所有平台手动存放文件，然后使用AssetBundles.CreateFromfile
+
+第三种方式是可能是集合了两者的优势。包含加密内容的未加密的AB是可以被Cache的。原始的AB可以被load进内存，使用AssetBundle.CreateFromMemory来解密和实例。
