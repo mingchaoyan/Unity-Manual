@@ -1,0 +1,2 @@
+# Controlling GameObjects Using Components
+在Unity编辑器，你可以使用inspector来改变组件的属性。所以，比如说改变Transform组件的位置数值，会导致游戏中GO的位置变化。你可以简单的改变渲染材质或者刚体的质量，相应的GO行为马上会出现。最重要的，脚本可以改变组件的属性来操作GO。
