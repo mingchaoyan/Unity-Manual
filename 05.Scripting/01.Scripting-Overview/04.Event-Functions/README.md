@@ -1,0 +1,8 @@
+# Event Functions
+Unity的脚本并不像传统编程那样，跑在一个持续的循环中，知道完成任务。相反Unity间断的控制一个脚本，调用其中的某些函数。一旦这个函数执行完了，控制权就交回到Unity。这些函数被称为事件函数，因为他们实际上是被Unity派发的时间的回应。Unity使用一个确定的顺序来调用某个事件。比如，你啃根已经发现了Update函数(每帧被调用)和Start 函数(首帧被调用)。Unity中还有很多这样的事件函数，完整的列表可以在Monobehaviour类的帮助文档中找到。接下来是一些最常用和重要的事件
+
+## Regular Update Events
+
+## Initialization Events
+
+在游戏中，每帧更新前有一段用于初始化的代码是非常有用的。Start函数在第一帧或者physics update之前调用。Awake 函数在场景被加载的时候被调用。注意虽然不同对象之间Start和Awake函数调用是任意次序的，但是所有的Awake函数将在第一个Start被调用前结束。这就意味着开始函数可以使用Awake阶段初始化的其它状态。
